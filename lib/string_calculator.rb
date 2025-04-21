@@ -1,5 +1,8 @@
 module StringCalculator
   def self.add(numbers)
-    return 0 if numbers.empty?
+    numbers_array = numbers.split(/[,\n]/)
+    print("numbers_array: #{numbers_array}\n")
+    numbers = numbers_array.map(&:to_i)
+    numbers.sum
   end
 end
